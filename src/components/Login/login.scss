@@ -1,0 +1,66 @@
+@import '../../index.scss';
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+.login{
+  // height: 100px;
+  // width: 100px;
+  // outline: 2px solid pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font: normal normal normal 16px/21px Mulish;
+  .logo{
+    height: 90px;
+    width: 90px;
+    background-image: url('/public/logo.png');
+  }
+  .logo-text{
+    color: #36A546CC;
+    font-size: 16px;
+    margin-top: 17px;
+    margin-bottom: 49px;
+    
+    letter-spacing: 0.02px;
+  }
+  .input-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 47px;
+    .inputs{
+      color: #a4a2a3;
+      width: 238px;
+      height: 42px;
+      background: #1F191966 0% 0% no-repeat padding-box;
+      box-shadow: inset 0px 3px 3px #FFFDFD40, 3px 3px 3px #4A494947;
+      mix-blend-mode: normal;
+      border: none;
+      border-radius: 20px;
+      mix-blend-mode: normal;
+      padding-left: 10px;
+    }
+  }
+  .login-btn{
+    background: transparent linear-gradient(180deg, #00FF2580 0%, #000000 100%, #36A54680 100%) 0% 0% no-repeat padding-box;
+    mix-blend-mode: normal;
+    border: 2px solid #8CFF0026;
+    width: 238px;
+    height: 42px;
+    color: #FFFFFF8C;
+    font-weight: bold;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 26px;
+    cursor: pointer;
+  }
+  .forgot-px{
+    font-size: 15px;
+    color: #36A546;
+  }
+}

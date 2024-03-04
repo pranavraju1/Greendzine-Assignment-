@@ -1,0 +1,15 @@
+@import './index.scss';
+.container{
+  background: transparent linear-gradient(180deg, #000000 0%, #000E09 100%) 0% 0% no-repeat padding-box;
+  mix-blend-mode: normal;
+  border-radius: 28px;
+  opacity: 1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include desktop{
+      border-radius: 0px;
+  }
+}
+

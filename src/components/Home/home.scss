@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
   .assist{
     background-image: url('/public/assist.png');
     height: 40px;
@@ -11,6 +12,8 @@
     position: absolute;
     top: 44px;
     right: 22px;
+    background-position: center; /* Position the image at the center */
+    border-radius: 50%;
   }
   .logo {
     position: relative;
@@ -18,7 +21,6 @@
     height: 88px;
     width: 100px;
     margin-bottom: 39px;
-  
     .comp-logo {
       background-image: url('/public/comp-logo.png');
       width: 71px;

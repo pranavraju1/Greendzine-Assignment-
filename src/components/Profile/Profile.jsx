@@ -40,10 +40,6 @@ const Profile = () => {
     submit();
   },[inputs]);
 
-  useEffect(()=>{
-    // console.log("showData",showData);
-  },[showData])
-
   const submit = () => {
     const filteredData = data.filter((item) => {
       const NAME = item.name.toLowerCase();
@@ -70,7 +66,6 @@ const Profile = () => {
               placeholder="Search with name"
               onChange={change}
               value={inputs}
-              id="in"
             />
             <button>
               <IoMdSearch style={{ width: "25px", height: "25px" }} />

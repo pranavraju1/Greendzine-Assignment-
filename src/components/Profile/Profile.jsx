@@ -31,23 +31,18 @@ const Profile = () => {
   ];
 
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredData, setFilteredData] = useState(initialData);
 
-  useEffect(() => {
-    const results = initialData.filter((item) =>
-      item.name.trim().toLowerCase().includes(searchTerm.trim().toLowerCase())
-    );
-    setFilteredData(results);
-  }, [searchTerm]);
+  var filteredData = initialData.filter((item)=>item.name.trim().toLowerCase().includes(searchTerm.trim().toLowerCase()))
 
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value);
+    console.log(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // If you want to perform any action on form submission, you can do it here.
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   // If you want to perform any action on form submission, you can do it here.
+  // };
 
   return (
     <div className="profile">
@@ -61,7 +56,7 @@ const Profile = () => {
       <div className="search">
         <div className="search-overlay"></div>
         <div className="search-text">
-          <form onSubmit={handleSubmit}>
+          <form>
             <input
               type="text"
               placeholder="Search with name"

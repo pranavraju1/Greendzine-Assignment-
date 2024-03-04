@@ -8,8 +8,8 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const history = useNavigate();
   const handleInput = () => {
-    console.log("email", email);
-    console.log("password", password);
+    // console.log("email", email);
+    // console.log("password", password);
     if (!email) {
       return alert("Please enter email");
     } else if (!password) {

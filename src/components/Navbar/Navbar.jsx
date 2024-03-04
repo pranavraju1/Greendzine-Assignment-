@@ -7,7 +7,7 @@ const Navbar = () => {
   const location = useLocation();
   const currentPath = location.pathname;
 
-  console.log(currentPath);
+  // console.log(currentPath);
 
   return (
     <div className="navbar">

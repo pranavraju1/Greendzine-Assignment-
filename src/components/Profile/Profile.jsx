@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./profile.scss";
 import { IoMdSearch } from "react-icons/io";
 
@@ -32,7 +32,9 @@ const Profile = () => {
 
   const [searchTerm, setSearchTerm] = useState("");
 
-  var filteredData = initialData.filter((item)=>item.name.trim().toLowerCase().includes(searchTerm.trim().toLowerCase()))
+  var filteredData = initialData.filter((item) =>
+    item.name.trim().toLowerCase().includes(searchTerm.trim().toLowerCase())
+  );
 
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value);
@@ -70,47 +72,48 @@ const Profile = () => {
         </div>
       </div>
       <div className="list">
-        {filteredData.map((item, index) => (
-          <div
-            className="list-items"
-            key={item.id}
-            style={
-              index % 2 !== 0 ? { marginLeft: "auto" } : { marginLeft: "0px" }
-            }
-          >
-            <div className="items-overlay"></div>
-            <div className="item">
-              <div className="item-text">
-                <div style={{ width: "80px" }}>EMP ID</div>
-                <div style={{ width: "20px" }}>:</div>
-                <div>
-                  <b>{item.id}</b>
+        {filteredData.length > 0 &&
+          filteredData.map((item, index) => (
+            <div
+              className="list-items"
+              key={item.id}
+              style={
+                index % 2 !== 0 ? { marginLeft: "auto" } : { marginLeft: "0px" }
+              }
+            >
+              <div className="items-overlay"></div>
+              <div className="item">
+                <div className="item-text">
+                  <div style={{ width: "80px" }}>EMP ID</div>
+                  <div style={{ width: "20px" }}>:</div>
+                  <div>
+                    <b>{item.id}</b>
+                  </div>
                 </div>
-              </div>
-              <div className="item-text">
-                <div style={{ width: "80px" }}>Name</div>
-                <div style={{ width: "20px" }}>:</div>
-                <div>
-                  <b>{item.name}</b>
+                <div className="item-text">
+                  <div style={{ width: "80px" }}>Name</div>
+                  <div style={{ width: "20px" }}>:</div>
+                  <div>
+                    <b>{item.name}</b>
+                  </div>
                 </div>
-              </div>
-              <div className="item-text">
-                <div style={{ width: "80px" }}>DOB</div>
-                <div style={{ width: "20px" }}>:</div>
-                <div>
-                  <b style={{ color: "#86591d" }}>{item.dob}</b>
+                <div className="item-text">
+                  <div style={{ width: "80px" }}>DOB</div>
+                  <div style={{ width: "20px" }}>:</div>
+                  <div>
+                    <b style={{ color: "#86591d" }}>{item.dob}</b>
+                  </div>
                 </div>
-              </div>
-              <div className="item-text">
-                <div style={{ width: "80px" }}>Role</div>
-                <div style={{ width: "20px" }}>:</div>
-                <div>
-                  <b style={{ color: "#2c7d39" }}>{item.role}</b>
+                <div className="item-text">
+                  <div style={{ width: "80px" }}>Role</div>
+                  <div style={{ width: "20px" }}>:</div>
+                  <div>
+                    <b style={{ color: "#2c7d39" }}>{item.role}</b>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
     </div>
   );

@@ -34,17 +34,17 @@ const Profile = () => {
   const [filteredData, setFilteredData] = useState(initialData);
 
   useEffect(() => {
-    const results = initialData.filter(item =>
-      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    const results = initialData.filter((item) =>
+      item.name.trim().toLowerCase().includes(searchTerm.trim().toLowerCase())
     );
     setFilteredData(results);
   }, [searchTerm]);
 
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     // If you want to perform any action on form submission, you can do it here.
   };
@@ -75,12 +75,14 @@ const Profile = () => {
         </div>
       </div>
       <div className="list">
-        {filteredData.map((item,index) => (
-          <div className="list-items" key={item.id} style={
-            index % 2 !== 0
-              ? { marginLeft: "14px" }
-              : { marginLeft: "0px" }
-          }>
+        {filteredData.map((item, index) => (
+          <div
+            className="list-items"
+            key={item.id}
+            style={
+              index % 2 !== 0 ? { marginLeft: "auto" } : { marginLeft: "0px" }
+            }
+          >
             <div className="items-overlay"></div>
             <div className="item">
               <div className="item-text">

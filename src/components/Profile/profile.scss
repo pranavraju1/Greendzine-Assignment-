@@ -117,8 +117,9 @@
     gap: 20px;
     height: 456px;
     overflow-y: scroll;
-    width: 328px;
+    // max-width: 330px;
     // border: 2px solid pink;
+    width: 328px;
     &::-webkit-scrollbar {
       display: none;
     }
